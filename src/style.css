@@ -1,0 +1,387 @@
+*{
+    margin: 0;padding: 0; font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    flex-direction: column;
+    background:linear-gradient(-60deg,crimson,orangered);
+    position: relative;
+    
+}
+.container input[type='radio']
+{
+display: none;
+}
+.container .carousel
+{
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+}
+.container .carousel .switch
+{
+height: 20px; width: 20px; display: block;
+border:2px solid #fff;
+border-radius: 50%;
+margin: 0 10px;
+cursor: pointer;
+}
+.container .carousel .switch:hover
+{
+    background: #fff;
+}
+.container #forOne:checked ~ .carousel label:nth-child(1),
+.container #forTwo:checked ~ .carousel label:nth-child(2),
+.container #forThree:checked ~ .carousel label:nth-child(3),
+.container #forFour:checked ~ .carousel label:nth-child(4)
+{
+    background: #fff;
+}
+
+.box--container
+{
+    width: 1200px;
+    display: flex;
+    overflow: hidden;
+
+}
+.box--container .image--box .image .image--content
+{
+    position: absolute;
+  
+}
+
+@media screen and (max-width:1200px)
+{
+    .box--container
+    {
+        width: 900px;
+    }
+}
+.box--container .image--box,
+.box--container .content--box
+{
+    width: 50%;
+    height: 500px; 
+    transform-style: preserve-3d;
+    transition: 2s all ease;
+}
+@media screen and (max-width:900px)
+{
+    .box--container
+    {
+        width:100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        
+    }
+    .box--container .image--box,
+.box--container .content--box
+{
+    width: 100%;
+    height: 100vh;
+}
+.box--container .content--box{ display: none;}
+.container .carousel
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,.5);
+    height: 40px;
+    width: 180px;
+    border-radius: 0 10px 10px 0;
+}
+}
+
+
+.box--container .image--box .image,
+.box--container .content--box .content
+{
+width: 100%;
+position: absolute;
+top:0;
+left: 0;
+height: 100%;
+display: flex;
+flex-direction: column;
+}
+
+.box--container .content--box .content,
+.box--container .image--box .image .image--content
+{
+    background: #fff;
+    padding: 20px;
+    justify-content: flex-end;
+    box-shadow: inset 0 0 3px #eee;
+    
+}
+.box--container .image--box .image .image--content
+{  
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background: rgba(0,0,0,.5);
+    box-shadow: none;
+    height: 100%;
+    width: 100%;
+    display: none;
+}
+
+.box--container .content--box .content .social,
+.box--container .image--box .image .image--content .social
+{
+     display: flex;
+    list-style: none;
+    margin-top: 30px;
+}
+.box--container .image--box .image .image--content .social li a,
+.box--container .content--box .content .social li a{
+    text-decoration: none;
+    margin: 0 10px;
+    border: 2px solid #111;
+    height: 40px; width: 40px; text-align: center; line-height: 40px;
+    display: block; font-size: 1.2em; color: #000;
+    border-radius: 50%;
+    transition: 0.5s all ease;
+}
+.box--container .image--box .image .image--content .social li a:hover,
+.box--container .content--box .content .social li a:hover{
+    background: var(--color);
+    color:#fff;
+    border:none;
+}
+.box--container .image--box .image .image--content .social li a{
+color: #fff;
+border-color: #fff;
+}
+.box--container .image--box .image .image--content h3,
+.box--container .content--box .content h3{
+    font-size: 3em;
+    text-transform: uppercase;
+}
+.box--container .image--box .image .image--content h3{
+    color:#fff;
+}
+.box--container .image--box .image .image--content p,
+.box--container .content--box .content p{
+    margin-top: 20px;
+    width: 100%;
+    text-align: justify;
+    color: #111;
+    font-size: 1.5em;
+    line-height: 20px;
+}
+.box--container .image--box .image .image--content p{
+    color: #fff;
+}
+.box--container .image--box .image .image--content .more,
+.box--container .content--box .content .more
+{
+    height: 40px;
+    width: 80px;
+    outline: none;
+    border: none;
+    border: 2px solid #111;
+    background: none;
+    margin: 30px 0;
+    font-size: 1.3em;
+    color:#000;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.5s all ease;
+    border-radius: 30px;
+
+}
+.box--container .image--box .image .image--content .more{
+    color: #fff;
+    border-color: #eee;
+}
+.box--container .content--box .content .more:hover{
+    background:#111;
+    color: #fff;
+}
+.box--container .image--box .image .image--content .more:hover
+{
+    background: #fff;
+    color: #111;
+}
+
+.box--container .image--box .image img
+{
+ width: 100%;
+ object-fit: cover;
+ height: 100%;
+}
+
+.box--container .image--box .image:nth-child(1)
+{
+    transform: rotateX(0deg) translateZ(250px);
+
+}
+.box--container .image--box .image:nth-child(2)
+{
+    transform: rotateX(90deg) translateZ(250px);
+    
+}
+.box--container .image--box .image:nth-child(3)
+{
+    transform: rotateX(180deg) translateZ(250px);
+    
+}
+.box--container .image--box .image:nth-child(4)
+{
+    transform: rotateX(-90deg) translateZ(250px);
+    
+}
+
+.box--container .content--box .content:nth-child(1)
+{
+    transform: rotateX(0deg) translateZ(250px);
+}
+.box--container .content--box .content:nth-child(2)
+{
+    transform: rotateX(-90deg) translateZ(250px);
+}
+.box--container .content--box .content:nth-child(3)
+{
+    transform: rotateX(-180deg) translateZ(250px);
+}
+.box--container .content--box .content:nth-child(4)
+{
+    transform: rotateX(90deg) translateZ(250px);
+}
+
+.container #forOne:checked ~ .box--container .image--box{
+    transform:rotateX(0deg);
+}
+.container #forTwo:checked ~ .box--container .image--box{
+    transform:rotateX(-90deg);
+}
+.container #forThree:checked ~ .box--container .image--box{
+    transform:rotateX(-180deg);
+}
+.container #forFour:checked ~ .box--container .image--box{
+    transform:rotateX(-270deg);
+}
+
+.container #forOne:checked ~ .box--container .content--box{
+    transform:rotateX(0deg);
+}
+.container #forTwo:checked ~ .box--container .content--box{
+    transform:rotateX(90deg);
+}
+.container #forThree:checked ~ .box--container .content--box{
+    transform:rotateX(180deg);
+}
+.container #forFour:checked ~ .box--container .content--box{
+    transform:rotateX(270deg);
+}
+
+@media screen and (max-width:900px)
+{
+    .box--container
+    {
+        width:100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        
+    }
+    .box--container .image--box .image .image--content
+    {
+        display: flex;
+    }
+    .box--container .image--box,
+.box--container .content--box
+{
+    width: 100%;
+    height: 100vh;
+}
+.box--container .content--box{ display: none;}
+.container .carousel
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,.5);
+    height: 40px;
+    width: 180px;
+    border-radius: 0 10px 10px 0;
+}
+
+
+.box--container .image--box .image:nth-child(1)
+{
+    transform: rotateX(0deg) translateZ(50vh);
+
+}
+.box--container .image--box .image:nth-child(2)
+{
+    transform: rotateX(90deg) translateZ(50vh);
+    
+}
+.box--container .image--box .image:nth-child(3)
+{
+    transform: rotateX(180deg) translateZ(50vh);
+    
+}
+.box--container .image--box .image:nth-child(4)
+{
+    transform: rotateX(-90deg) translateZ(50vh);
+    
+}
+
+.box--container .content--box .content:nth-child(1)
+{
+    transform: rotateX(0deg) translateZ(50vh);
+}
+.box--container .content--box .content:nth-child(2)
+{
+    transform: rotateX(-90deg) translateZ(50vh);
+}
+.box--container .content--box .content:nth-child(3)
+{
+    transform: rotateX(-180deg) translateZ(50vh);
+}
+.box--container .content--box .content:nth-child(4)
+{
+    transform: rotateX(90deg) translateZ(50vh);
+}
+
+.container #forOne:checked ~ .box--container .image--box{
+    transform:rotateX(0deg);
+}
+.container #forTwo:checked ~ .box--container .image--box{
+    transform:rotateX(-90deg);
+}
+.container #forThree:checked ~ .box--container .image--box{
+    transform:rotateX(-180deg);
+}
+.container #forFour:checked ~ .box--container .image--box{
+    transform:rotateX(-270deg);
+}
+
+.container #forOne:checked ~ .box--container .content--box{
+    transform:rotateX(0deg);
+}
+.container #forTwo:checked ~ .box--container .content--box{
+    transform:rotateX(90deg);
+}
+.container #forThree:checked ~ .box--container .content--box{
+    transform:rotateX(180deg);
+}
+.container #forFour:checked ~ .box--container .content--box{
+    transform:rotateX(270deg);
+}
+
+}

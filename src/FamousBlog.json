@@ -1,0 +1,26 @@
+[
+    {
+        "image":"./images/1.jpg",
+        "title":"Swag Suits",
+        "description":" Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. cillum dolore eu fugiat nulla pariatur."
+
+    },
+    {
+        "image":"./images/2.jpg",
+        "title":"Fancy Dress",
+        "description":" Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. cillum dolore eu fugiat nulla pariatur."
+
+    },
+    {
+        "image":"./images/3.jpg",
+        "title":"Care Stylish",
+        "description":" Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. cillum dolore eu fugiat nulla pariatur."
+
+    },
+    {
+        "image":"./images/4.jpg",
+        "title":"Swag World",
+        "description":" Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. cillum dolore eu fugiat nulla pariatur."
+
+    }
+]
